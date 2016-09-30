@@ -1,0 +1,53 @@
+{
+	"default": "mastro-elfo",
+	"pages": [
+		{
+			"id": "mastro-elfo",
+			"menuTitle": "Home M-E",
+			"headerTitle": "Home page di mastro-elfo",
+			"_url": "http://mastro-elfo.github.io",
+			"url": "loading.html",
+			"menuStyle": {},
+			"headerStyle": {
+				"background-color": "#333",
+				"color": "#eee"
+			}
+		},
+		{
+			"id": "genioweb",
+			"menuTitle": "GenioWEB",
+			"headerTitle": "GenioWEB - Agenzia web",
+			"_url": "http://www.genioweb.com/",
+			"url": "loading.html",
+			"menuStyle": {},
+			"headerStyle": {
+				"background-color": "#009EE1",
+				"color": "#eee"
+			}
+		},
+		{
+			"id": "M5S",
+			"menuTitle": "Movimento 5 Stelle",
+			"headerTitle": "Il Movimento 5 Stelle non riceve alcun finanziamento pubblico",
+			"_url": "http://www.beppegrillo.it/movimento/",
+			"url": "loading.html",
+			"menuStyle": {},
+			"headerStyle": {
+				"background-color": "#EED924",
+				"color": "#222"
+			}
+		},
+		{
+			"id": "W3S",
+			"menuTitle": "W3Schools",
+			"headerTitle": "W3Schools",
+			"_url": "http://www.w3schools.com/",
+			"url": "loading.html",
+			"menuStyle": {},
+			"headerStyle": {
+				"background-color": "#4CAF50",
+				"color": "#eee"
+			}
+		}
+	]
+}

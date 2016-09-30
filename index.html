@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="pineapple" ng-controller="Pineapple as pineapple">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<!--
+		<link rel="icon" href="media/icon.128.png"/>
+		<link rel="manifest" href="webapp.json"/>
+		<meta name="mobile-web-app-capable" content="yes"/>
+		<link rel="apple-touch-icon" href="media/icon.128.png"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		-->
+		<title ng-bind-html="'Pineapple: '+pineapple.getSelected().menuTitle">Pineapple</title>
+		<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+		<script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-material/angular-material.js"></script>
+		<script type="text/javascript" src="js/pineapple.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"/>
+	</head>
+	<body>
+		<div layout="column">
+			<section layout="row" flex ng-controller="Menu as menu">
+				<md-sidenav
+					class="md-sidenav-left"
+					md-component-id="leftSidenav"
+					md-is-locked-open="$mdMedia('gt-sm')"
+					md-whiteframe="4"
+					md-is-open="menu.isOpen">
+					<md-content ng-repeat="page in pineapple.data.pages" ng-click="pineapple.select(page.id);menu.close();" layout-padding ng-bind-html="page.menuTitle"></md-content>
+				</md-sidenav>
+				
+				<md-content flex>
+					<div ng-repeat="page in pineapple.data.pages" ng-show="!!page.selected" class="page-container" layout="column">
+						<md-toolbar ng-style="page.headerStyle" layout="row">
+							<md-button aria-label="Menu" ng-click="menu.toggle()" hide-gt-sm>
+								<span style="font-size: 200%;">&equiv;</span>
+							</md-button>
+							<h1 class="md-toolbar-tools" ng-bind-html="page.headerTitle" flex></h1>
+						</md-toolbar>
+						<iframe src="{{trustSrc(page.url)}}" class="page-container" flex>
+							Can't open {{page._url}}
+						</iframe>
+					</div>
+				</md-content>
+			</section>
+		</div>
+	</body>
+</html>
