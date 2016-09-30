@@ -17,7 +17,7 @@
 			"id": "genioweb",
 			"menuTitle": "GenioWEB",
 			"headerTitle": "GenioWEB - Agenzia web",
-			"_url": "https://www.genioweb.com/",
+			"_url": "http://www.genioweb.com/",
 			"url": "loading.html",
 			"menuStyle": {},
 			"headerStyle": {
@@ -29,7 +29,7 @@
 			"id": "M5S",
 			"menuTitle": "Movimento 5 Stelle",
 			"headerTitle": "Il Movimento 5 Stelle non riceve alcun finanziamento pubblico",
-			"_url": "https://www.beppegrillo.it/movimento/",
+			"_url": "http://www.beppegrillo.it/movimento/",
 			"url": "loading.html",
 			"menuStyle": {},
 			"headerStyle": {
@@ -41,7 +41,7 @@
 			"id": "W3S",
 			"menuTitle": "W3Schools",
 			"headerTitle": "W3Schools",
-			"_url": "https://www.w3schools.com/",
+			"_url": "http://www.w3schools.com/",
 			"url": "loading.html",
 			"menuStyle": {},
 			"headerStyle": {
